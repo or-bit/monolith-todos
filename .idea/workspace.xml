@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37e093de-427c-4e65-b821-2077e89bbf32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/TodoBubble.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/components/TodoForm.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/components/TodoItem.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/components/TodoList.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prestart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,12 +18,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="460">
+              <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding>
+                <marker date="1498428256120" expanded="true" signature="0:587" ph="{&quot;name&quot;: &quot;frontend&quot;...}" />
+                <marker date="1498428256120" expanded="true" signature="83:117" ph="{&quot;react&quot;: &quot;^15.6.1&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,16 +130,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/App.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -166,7 +160,6 @@
         <option value="$PROJECT_DIR$/frontend/src/components/TodoList.test.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/TodoList.test.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/components/TodoForm.test.js" />
-        <option value="$PROJECT_DIR$/frontend/package.json" />
         <option value="$PROJECT_DIR$/frontend/src/components/TodoItem.test.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/TodoForm.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/components/TodoItem.jsx" />
@@ -175,6 +168,7 @@
         <option value="$PROJECT_DIR$/frontend/src/TodoBubble.jsx" />
         <option value="$PROJECT_DIR$/prestart.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/frontend/package.json" />
       </list>
     </option>
   </component>
@@ -406,7 +400,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498410394407</updated>
-      <workItem from="1498410396382" duration="9578000" />
+      <workItem from="1498410396382" duration="10817000" />
     </task>
     <servers />
   </component>
@@ -416,7 +410,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9578000" />
+    <option name="totallyTimeSpent" value="10817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="2" width="2087" height="1444" extended-state="0" />
@@ -537,18 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <marker date="1498425206311" expanded="true" signature="0:587" ph="{&quot;name&quot;: &quot;frontend&quot;...}" />
-            <marker date="1498425206311" expanded="true" signature="83:117" ph="{&quot;react&quot;: &quot;^15.6.1&quot;...}" />
-            <marker date="1498425206311" expanded="true" signature="254:350" ph="{&quot;enzyme&quot;: &quot;^2.9.1&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -640,9 +622,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="460">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <marker date="1498428256120" expanded="true" signature="0:587" ph="{&quot;name&quot;: &quot;frontend&quot;...}" />
+            <marker date="1498428256120" expanded="true" signature="83:117" ph="{&quot;react&quot;: &quot;^15.6.1&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
