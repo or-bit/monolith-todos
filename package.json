@@ -1,0 +1,30 @@
+{
+  "name": "monolith-todo",
+  "version": "1.0.0",
+  "description": "Bubble todo",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js frontend/src/**/*.jsx",
+    "prestart": "node prestart.js",
+    "start": "node index.js",
+    "postinstall": "cd frontend && npm install",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "monolith"
+  ],
+  "author": "Or-bit",
+  "license": "MIT",
+  "dependencies": {
+    "copy-dir": "^0.3.0",
+    "cross-spawn": "^5.1.0",
+    "monolith-backend": "^0.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1"
+  }
+}
