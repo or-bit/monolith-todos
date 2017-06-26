@@ -1,42 +1,53 @@
 import React from 'react';
 
-import { GenericBubble } from 'monolith-frontend';
+import { Button, GenericBubble, WebNotification } from 'monolith-frontend';
 
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
+import io from 'socket.io-client';
 
 export default class TodoBubble extends GenericBubble {
   constructor(props) {
     super(props);
 
-    const todos = [
-      {
-        id: '00001',
-        task: 'Completed sample task',
-        complete: 'true',
-      },
-      {
-        id: '00002',
-        task: 'Unfinished sample task',
-        complete: 'false',
-      },
-    ];
+    this.socket = io('http://localhost:5000');
+
+    this.socket.on('todosResponse', todosFromDB => this.setTodoStateAndPersist(todosFromDB));
+    this.socket.on('updatedTodos', todosFromDB => this.setTodoState(todosFromDB));
 
     this.state = {
       alive: true,
-      todos: props.empty ? [] : todos,
+      todos: [],
     };
+  }
+
+  componentDidMount() {
+      this.loadFromBackend();
+  }
+
+  loadFromBackend() {
+      this.socket.emit('todos');
   }
 
   static generateId() {
     return Math.floor(Math.random() * 90000) + 10000;
   }
 
+  setTodoState(todos) {
+    this.setState({ todos });
+    new WebNotification('To-do updated').notify();
+  }
+
+  setTodoStateAndPersist(todos) {
+    this.setState({ todos });
+    this.socket.emit('update', todos);
+  }
+
   handleNodeRemoval(nodeId) {
     let todos = this.state.todos;
     todos = todos.filter(el => el.id !== nodeId);
-    this.setState({ todos });
+    this.setTodoStateAndPersist(todos);
   }
 
   handleSubmit(task) {
@@ -44,7 +55,7 @@ export default class TodoBubble extends GenericBubble {
     const id = TodoBubble.generateId().toString();
     const complete = 'false';
     todos = todos.concat([{ id, task, complete }]);
-    this.setState({ todos });
+    this.setTodoStateAndPersist(todos);
   }
 
   handleToggleComplete(nodeId) {
@@ -56,7 +67,7 @@ export default class TodoBubble extends GenericBubble {
       }
       return newTodo;
     });
-    this.setState({ todos });
+    this.setTodoStateAndPersist(todos);
   }
 
   aliveRender() {
@@ -68,6 +79,7 @@ export default class TodoBubble extends GenericBubble {
           removeNode={nodeId => this.handleNodeRemoval(nodeId)}
           toggleComplete={nodeId => this.handleToggleComplete(nodeId)}
         />
+        <Button text="Refresh" className="btn btn-info" callback={() => this.loadFromBackend()} />
         <TodoForm onTaskSubmit={task => this.handleSubmit(task)} />
       </div>
     );
